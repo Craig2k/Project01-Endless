@@ -248,7 +248,7 @@ MonoBehaviour:
   - {fileID: 5717451790807076676, guid: 59ddd1278220b8247a14251f312a732c, type: 3}
   - {fileID: 3433634999204227037, guid: d89823042adfff64fb2afe2a4ab73f39, type: 3}
   obstacleSpawnTime: 2
-  obstacleSpeed: 6.5
+  obstacleSpeed: 8
 --- !u!4 &992135755
 Transform:
   m_ObjectHideFlags: 0
@@ -565,5 +565,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 318233a3dcd59e14a8ed5a18676e311c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpForce: 670
+  JumpForce: 600
   isGrounded: 0
