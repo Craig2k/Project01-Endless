@@ -11,8 +11,10 @@ public class spawnerscript : MonoBehaviour {
     private float timeUntilObstacleSpawn;
 
     private void Update() {
-        SpawnLoop();
-    }
+        if (GameManager.instance.isPlaying) {
+            SpawnLoop();
+        }
+        }
     private void SpawnLoop() {
         timeUntilObstacleSpawn += Time.deltaTime;
 
