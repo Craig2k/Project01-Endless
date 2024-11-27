@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour {
     public bool isPlaying = false;
 
     private void Update() {
-        if (!isPlaying) {
+        if (isPlaying) {
             currentScore += Time.deltaTime;
         }
 
