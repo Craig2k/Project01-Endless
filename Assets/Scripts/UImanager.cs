@@ -6,11 +6,13 @@ using TMPro;
 public class UImanager : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI scoreUI;
     [SerializeField] private GameObject startMenuUI;
+    [SerializeField] private GameObject gameOverUI;
 
     GameManager gm;
 
     private void Start() {
         gm = GameManager.instance;
+        gm.onGameOver.AddListener(ActivateGameOverUI);
     }
 
     public void PlayButtonHandler () {
@@ -18,8 +20,10 @@ public class UImanager : MonoBehaviour {
 
         if (!startMenuUI)
             Debug.Log("No Start Menu Assigned.");
+    }
 
-        startMenuUI.SetActive(false);
+    public void ActivateGameOverUI() {
+        gameOverUI.SetActive(true);
     }
 
     private void OnGUI() {
