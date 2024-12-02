@@ -8,7 +8,7 @@ public class spawnerscript : MonoBehaviour {
     [SerializeField] private GameObject[] obstaclePrefabs;
     [SerializeField] protected Transform obstacleParent;
     public float obstacleSpawnTime = 2f;
-    public float obstacleSpeed = 1f;
+    public float obstacleSpeed = 8f;
 
     private float timeUntilObstacleSpawn;
 
@@ -20,7 +20,7 @@ public class spawnerscript : MonoBehaviour {
         if (GameManager.instance.isPlaying) {
             SpawnLoop();
         }
-        }
+    }
     private void SpawnLoop() {
         timeUntilObstacleSpawn += Time.deltaTime;
 
@@ -35,6 +35,7 @@ public class spawnerscript : MonoBehaviour {
             Destroy(child.gameObject);
         }
     }
+
          
     private void spawn() {
         GameObject obstacleToSpawn = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)];
